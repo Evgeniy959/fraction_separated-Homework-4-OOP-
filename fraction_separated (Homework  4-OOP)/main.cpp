@@ -82,23 +82,23 @@ public:
 	/////////////////////////////////////////////////
 
 	//           Consctructors:
-	Fraction()
+	Fraction() :minus(false), integer(0), numerator(0), denominator(1)
 	{
-		this->minus = false;
+		/*this->minus = false;
 		this->integer = 0;
 		this->numerator = 0;
-		this->denominator = 1;
+		this->denominator = 1;*/
 #ifdef DEBUG
 		cout << "DefaultConstructor:\t" << this << endl;
 #endif // DEBUG
 
 	}
-	Fraction(int integer)
+	Fraction(int integer) :Fraction(integer)
 	{
-		this->minus = false;
+		/*this->minus = false;
 		this->integer = integer;
 		this->numerator = 0;
-		this->denominator = 1;
+		this->denominator = 1;*/
 		if (integer < 0)
 		{
 			minus = true;
@@ -108,12 +108,12 @@ public:
 		cout << "Constructor1:\t" << this << endl;
 #endif // DEBUG
 	}
-	Fraction(int numerator, int denominator)
+	Fraction(int numerator, int denominator): Fraction(numerator)
 	{
-		this->minus = false;
+		/*this->minus = false;
 		this->integer = 0;
 		this->numerator = numerator;
-		this->set_denominator(denominator);
+		this->set_denominator(denominator);*/
 		if (numerator < 0)
 		{
 			minus = true;
@@ -124,11 +124,11 @@ public:
 #endif // DEBUG
 
 	}
-	Fraction(int integer, int numerator, int denominator)
+	Fraction(int integer, int numerator, int denominator) :Fraction(numerator), Fraction(integer)
 	{
-		this->minus = false;
+		/*this->minus = false;
 		this->integer = integer;
-		this->numerator = numerator;
+		this->numerator = numerator;*/
 		this->set_denominator(denominator);
 		if (integer < 0)
 		{
