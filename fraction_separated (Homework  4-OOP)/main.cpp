@@ -5,6 +5,9 @@ using namespace std;
 
 #define tab "\t"
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////				CLASS DECLARATION - ОБЪЯВЛЕНИЕ КЛАССА				/////////////////
+
 class Fraction; // Объявление класса
 Fraction operator+(Fraction left, Fraction right); // Прототип оператора +
 Fraction operator-(Fraction left, Fraction right);
@@ -54,6 +57,11 @@ public:
 	void to_improper();
 	Fraction& reduce();
 };
+//////////////						CLASS DECLARATION END						/////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////				CLASS DEFINITION - ОПРЕДЕЛЕНИЕ КЛАССА				/////////////////
 
 bool Fraction::get_minus()const
 	{
@@ -148,7 +156,7 @@ bool Fraction::get_minus()const
 #endif // DEBUG
 
 	}
-	Fraction::Fraction(int integer, int numerator, int denominator) :Fraction(numerator)//, Fraction(integer)
+	Fraction::Fraction(int integer, int numerator, int denominator) :Fraction(numerator), Fraction(integer)
 	{
 		this->set_denominator(denominator);
 		if (integer < 0)
@@ -161,16 +169,12 @@ bool Fraction::get_minus()const
 			minus = true;
 			this->numerator = -numerator;
 		}
-#ifdef DEBUG
 		cout << "Constructor3:\t" << this << endl;
-#endif // DEBUG
 
 	}
 	Fraction::~Fraction()
 	{
-#ifdef DEBUG
 		cout << "Destructor:\t" << this << endl;
-#endif // DEBUG
 	}
 	Fraction& Fraction::operator=(const Fraction& other)
 	{
@@ -391,6 +395,8 @@ istream& operator>>(istream& is, Fraction& obj)
 	obj.set_denominator(y);
 	return is;
 }
+//////////////						CLASS DEFINITION END						/////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 
 //#define CONSTRUCTOR_CHECK
 void main()
