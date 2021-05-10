@@ -1,4 +1,4 @@
-// Разделить класс Fraction на файлы.Сделать это в ветке fraction_separated.
+п»ї// Р Р°Р·РґРµР»РёС‚СЊ РєР»Р°СЃСЃ Fraction РЅР° С„Р°Р№Р»С‹.РЎРґРµР»Р°С‚СЊ СЌС‚Рѕ РІ РІРµС‚РєРµ fraction_separated.
 #pragma once
 #include<iostream>
 using namespace std;
@@ -6,10 +6,10 @@ using namespace std;
 #define tab "\t"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////				CLASS DECLARATION - ОБЪЯВЛЕНИЕ КЛАССА				/////////////////
+//////////////				CLASS DECLARATION - РћР‘РЄРЇР’Р›Р•РќРР• РљР›РђРЎРЎРђ				/////////////////
 
-class Fraction; // Объявление класса
-Fraction operator+(Fraction left, Fraction right); // Прототип оператора +
+class Fraction; // РћР±СЉСЏРІР»РµРЅРёРµ РєР»Р°СЃСЃР°
+Fraction operator+(Fraction left, Fraction right); // РџСЂРѕС‚РѕС‚РёРї РѕРїРµСЂР°С‚РѕСЂР° +
 Fraction operator-(Fraction left, Fraction right);
 Fraction operator*(Fraction left, Fraction right);
 Fraction operator/(Fraction left, Fraction right);
@@ -24,10 +24,10 @@ istream& operator>>(istream& is, Fraction& obj);
 
 class Fraction
 {
-	bool minus; // учитывает знак
-	int integer; // целая часть дроби 
-	int numerator; // числитель дроби 
-	int denominator; // знаменатель дроби
+	bool minus; // СѓС‡РёС‚С‹РІР°РµС‚ Р·РЅР°Рє
+	int integer; // С†РµР»Р°СЏ С‡Р°СЃС‚СЊ РґСЂРѕР±Рё 
+	int numerator; // С‡РёСЃР»РёС‚РµР»СЊ РґСЂРѕР±Рё 
+	int denominator; // Р·РЅР°РјРµРЅР°С‚РµР»СЊ РґСЂРѕР±Рё
 
 public:
 	bool get_minus()const;

@@ -1,7 +1,7 @@
-#include"Fraction.h"
+п»ї#include"Fraction.h"
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////				CLASS DEFINITION - ОПРЕДЕЛЕНИЕ КЛАССА				/////////////////
+//////////////				CLASS DEFINITION - РћРџР Р•Р”Р•Р›Р•РќРР• РљР›РђРЎРЎРђ				/////////////////
 
 bool Fraction::get_minus()const
 {
@@ -197,18 +197,18 @@ Fraction& Fraction::reduce()
 {
 	if (numerator == 0) return *this;
 	int more, less, rest;
-	//Выясняем кто больше числитель или знаменатель:
+	//Р’С‹СЏСЃРЅСЏРµРј РєС‚Рѕ Р±РѕР»СЊС€Рµ С‡РёСЃР»РёС‚РµР»СЊ РёР»Рё Р·РЅР°РјРµРЅР°С‚РµР»СЊ:
 	if (numerator > denominator) more = numerator, less = denominator;
 	else less = numerator, more = denominator;
-	//Находим наибольший общий делитель;
+	//РќР°С…РѕРґРёРј РЅР°РёР±РѕР»СЊС€РёР№ РѕР±С‰РёР№ РґРµР»РёС‚РµР»СЊ;
 	do
 	{
 		rest = more % less;
 		more = less;
 		less = rest;
 	} while (rest);
-	int GCD = more; //Наибольший общий делитель
-	//Сокращаем дробь:
+	int GCD = more; //РќР°РёР±РѕР»СЊС€РёР№ РѕР±С‰РёР№ РґРµР»РёС‚РµР»СЊ
+	//РЎРѕРєСЂР°С‰Р°РµРј РґСЂРѕР±СЊ:
 	numerator /= GCD;
 	denominator /= GCD;
 	return *this;
