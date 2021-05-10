@@ -156,8 +156,11 @@ bool Fraction::get_minus()const
 #endif // DEBUG
 
 	}
-	Fraction::Fraction(int integer, int numerator, int denominator) :Fraction(numerator), Fraction(integer)
+	Fraction::Fraction(int integer, int numerator, int denominator) //:Fraction(numerator), Fraction(integer)
 	{
+		this->minus = false;
+		this->integer = integer;
+		this->numerator = numerator;
 		this->set_denominator(denominator);
 		if (integer < 0)
 		{
